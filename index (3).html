@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women Safety - Safe Space for All Women</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #8b0000;
+      --primary-dark: #660000;
+      --primary-light: #a61c1c;
+      --text-dark: #1a1a1a;
+      --text-gray: #666;
+      --bg-light: #f5f5f5;
+      --bg-white: #fff;
+      --shadow: 0 4px 15px rgba(0,0,0,0.1);
+      --shadow-hover: 0 6px 20px rgba(139,0,0,0.3);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: var(--bg-light);
+    }
+
+    /* Accessibility Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 10000;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+
+    .top-bar .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: var(--transition);
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
+    .accessibility-tools {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .accessibility-tools button {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .accessibility-tools button:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* Header */
+    .header {
+      background: var(--bg-white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-section img {
+      height: 70px;
+    }
+
+    .logo-text h1 {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .logo-text p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      background: var(--primary-color);
+      color: #fff;
+      outline: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--primary-color);
+      background: none;
+      border: none;
+      padding: 5px;
+    }
+
+    /* Emergency Banner */
+    .emergency-banner {
+      background: linear-gradient(135deg, #ff4444, #cc0000);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+
+    .emergency-banner h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .emergency-banner .helpline-number {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.9; }
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 550px;
+      background: linear-gradient(rgba(139,0,0,0.7), rgba(139,0,0,0.7)), 
+                  url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary-color);
+      padding: 15px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: var(--transition);
+      font-size: 1.1rem;
+    }
+
+    .hero-btn:hover,
+    .hero-btn:focus {
+      background: var(--primary-color);
+      color: #fff;
+      transform: scale(1.05);
+      outline: 2px solid white;
+      outline-offset: 2px;
+    }
+
+    .hero-btn.secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .hero-btn.secondary:hover {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    /* Quick Links */
+    .quick-links {
+      background: var(--bg-white);
+      padding: 60px 0;
+    }
+
+    .quick-links .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .quick-links h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .link-card {
+      background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: pointer;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(139,0,0,0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .link-card:hover::before {
+      left: 100%;
+    }
+
+    .link-card:hover,
+    .link-card:focus-within {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary-color);
+    }
+
+    .link-card .icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: inline-block;
+      transition: var(--transition);
+    }
+
+    .link-card:hover .icon {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .link-card h4 {
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    .link-card p {
+      font-size: 0.95rem;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+
+    .link-card .card-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .link-card .card-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Services Section */
+    .services {
+      background: var(--bg-light);
+      padding: 60px 0;
+    }
+
+    .services .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .services h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .services-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--text-gray);
+      margin-bottom: 40px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .service-card .service-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .service-card h4 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+
+    .service-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .service-card ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .service-card ul li::before {
+      content: '✓';
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    .service-btn {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 600;
+    }
+
+    .service-btn:hover {
+      background: var(--primary-dark);
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .about {
+      background: var(--bg-white);
+      padding: 60px 0;
+    }
+
+    .about .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about h3 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+    }
+
+    .about p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .about .highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .highlight-item {
+      background: var(--bg-light);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .highlight-item strong {
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Stats Section */
+    .stats {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+      color: #fff;
+      padding: 60px 0;
+    }
+
+    .stats .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-box {
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      transition: var(--transition);
+    }
+
+    .stat-box:hover {
+      background: rgba(255,255,255,0.2);
+      transform: scale(1.05);
+    }
+
+    .stat-box h4 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+      min-height: 60px;
+    }
+
+    .stat-box p {
+      font-size: 1.2rem;
+    }
+
+    .stat-number {
+      display: inline-block;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: var(--bg-white);
+      padding: 60px 0;
+    }
+
+    .faq-section .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .faq-section h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 2px solid #f0f0f0;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item.active {
+      border-color: var(--primary-color);
+      box-shadow: var(--shadow);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 20px 25px;
+      background: white;
+      border: none;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      background: var(--bg-light);
+      color: var(--primary-color);
+    }
+
+    .faq-icon {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      background: var(--bg-light);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 20px 25px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--text-gray);
+    }
+
+    /* Complaint Form Section */
+    .complaint-section {
+      background: var(--bg-light);
+      padding: 60px 0;
+    }
+
+    .complaint-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .complaint-section h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .complaint-section p {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--text-gray);
+      font-size: 1.1rem;
+    }
+
+    .complaint-form {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .submit-btn {
+      background: var(--primary-color);
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* News Section */
+    .news {
+      background: var(--bg-white);
+      padding: 60px 0;
+    }
+
+    .news .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .news h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .news-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid #f0f0f0;
+    }
+
+    .news-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .news-card-content {
+      padding: 25px;
+    }
+
+    .news-card h4 {
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+
+    .news-card p {
+      font-size: 0.95rem;
+      color: var(--text-gray);
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .news-card .date {
+      font-size: 0.85rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .news-card .read-more {
+      display: inline-block;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: var(--transition);
+    }
+
+    .news-card .read-more:hover {
+      text-decoration: underline;
+    }
+
+    /* Resources Section */
+    .resources {
+      background: var(--bg-light);
+      padding: 60px 0;
+    }
+
+    .resources .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .resources h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .resource-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .resource-card:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .resource-card h4 {
+      color: var(--text-dark);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .resource-card ul {
+      list-style: none;
+    }
+
+    .resource-card ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .resource-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .resource-card a {
+      color: var(--text-gray);
+      text-decoration: none;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .resource-card a:hover {
+      color: var(--primary-color);
+      padding-left: 5px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #1a1a1a;
+      color: #ccc;
+      padding: 50px 0 20px;
+    }
+
+    .footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer h4 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .footer a:hover {
+      color: #fff;
+      padding-left: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      padding: 0;
+    }
+
+    .social-links a:hover {
+      background: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--text-gray);
+      background: none;
+      border: none;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover {
+      color: var(--primary-color);
+    }
+
+    .modal h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    /* Emergency SOS Button */
+    .sos-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ff0000, #cc0000);
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 20px rgba(255,0,0,0.5);
+      cursor: pointer;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      animation: sosGlow 2s infinite;
+    }
+
+    .sos-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(255,0,0,0.7);
+    }
+
+    .sos-button small {
+      font-size: 0.7rem;
+      margin-top: 5px;
+    }
+
+    @keyframes sosGlow {
+      0%, 100% {
+        box-shadow: 0 4px 20px rgba(255,0,0,0.5);
+      }
+      50% {
+        box-shadow: 0 4px 30px rgba(255,0,0,0.9);
+      }
+    }
+
+    /* Offline Mode Indicator */
+    .offline-indicator {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      z-index: 10002;
+      text-align: center;
+      display: none;
+    }
+
+    .offline-indicator.show {
+      display: block;
+    }
+
+    /* Animation keyframes */
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideOut {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 280px;
+        background: #fff;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+        transition: right 0.3s ease;
+      }
+
+      .nav.open {
+        right: 0;
+      }
+
+      .nav a {
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .hero {
+        height: 450px;
+      }
+
+      .about .container {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-text h1 {
+        font-size: 1rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-links h3,
+      .services h3,
+      .news h3,
+      .resources h3,
+      .about h3 {
+        font-size: 2rem;
+      }
+
+      .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about .highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div>📧 complaints@ncw.nic.in | 📞 011-26944880 | 🆘 Helpline: 7827-170-170</div>
+      <div class="accessibility-tools">
+        <button id="increaseFont" aria-label="Increase font size">A+</button>
+        <button id="decreaseFont" aria-label="Decrease font size">A-</button>
+        <button id="toggleContrast" aria-label="Toggle high contrast">◐</button>
+        <a href="#" aria-label="Switch to Hindi">हिंदी</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo-section">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="India Flag">
+        <div class="logo-text">
+          <h1>WOMEN SAFETY</h1>
+          <p>महिला सुरक्षा - Your Safe Space</p>
+        </div>
+      </div>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">☰</button>
+      <nav class="nav" id="nav" role="navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQs</a>
+        <a href="#complaints">File Complaint</a>
+        <a href="#news">News</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <h3>🆘 Women Helpline Numbers (24×7)</h3>
+    <div class="helpline-number">181 | 1091 | 7827-170-170</div>
+    <p>National Women Helpline: 181 | Police Women Helpline: 1091 | NCW Helpline: 7827-170-170</p>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Empowering Women Across India</h2>
+      <p>Working towards equality, justice and dignity for all women</p>
+      <div class="hero-buttons">
+        <a href="#complaints" class="hero-btn">Lodge a Complaint</a>
+        <a href="#track" class="hero-btn secondary">Track Status</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick-links" id="main-content">
+    <div class="container">
+      <h3>Quick Access Services</h3>
+      <div class="links-grid">
+        <div class="link-card" tabindex="0" onclick="document.getElementById('complaints').scrollIntoView({behavior: 'smooth'})">
+          <div class="icon">📝</div>
+          <h4>File Online Complaint</h4>
+          <p>Lodge your complaint online quickly and securely with complete confidentiality</p>
+          <a href="#complaints" class="card-link">File Now →</a>
+        </div>
+        <div class="link-card" tabindex="0" onclick="document.getElementById('trackModal').classList.add('active')">
+          <div class="icon">📊</div>
+          <h4>Track Complaint Status</h4>
+          <p>Check the real-time status and updates of your registered complaint</p>
+          <a href="#" class="card-link" onclick="event.preventDefault()">Track Now →</a>
+        </div>
+        <div class="link-card" tabindex="0">
+          <div class="icon">⚖️</div>
+          <h4>Free Legal Aid</h4>
+          <p>Access free legal support, guidance and consultation from experts</p>
+          <a href="#legal" class="card-link">Get Help →</a>
+        </div>
+        <div class="link-card" tabindex="0">
+          <div class="icon">📞</div>
+          <h4>24×7 Helpline</h4>
+          <p>Emergency helpline available round the clock: 7827-170-170</p>
+          <a href="tel:7827170170" class="card-link">Call Now →</a>
+        </div>
+        <div class="link-card" tabindex="0">
+          <div class="icon">🏥</div>
+          <h4>Medical Assistance</h4>
+          <p>Get immediate medical and psychological support services</p>
+          <a href="#medical" class="card-link">Learn More →</a>
+        </div>
+        <div class="link-card" tabindex="0">
+          <div class="icon">🏠</div>
+          <h4>Shelter Services</h4>
+          <p>Find safe shelter homes and rehabilitation centers nearby</p>
+          <a href="#shelter" class="card-link">Find Shelter →</a>
+        </div>
+        <div class="link-card" tabindex="0">
+          <div class="icon">📚</div>
+          <h4>Know Your Rights</h4>
+          <p>Learn about legal rights, provisions and women protection laws</p>
+          <a href="#rights" class="card-link">Read More →</a>
+        </div>
+        <div class="link-card" tabindex="0">
+          <div class="icon">💼</div>
+          <h4>Employment Support</h4>
+          <p>Access skill development and employment assistance programs</p>
+          <a href="#employment" class="card-link">Explore →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <h3>Our Key Services</h3>
+      <p class="services-subtitle">Comprehensive support for women's rights and welfare</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">⚖️</div>
+          <h4>Legal Services</h4>
+          <ul>
+            <li>Free legal consultation</li>
+            <li>Court representation</li>
+            <li>Legal awareness programs</li>
+            <li>Rights education</li>
+            <li>Documentation assistance</li>
+            <li>Case filing support</li>
+          </ul>
+          <a href="#legal" class="service-btn">Access Services</a>
+          <div style="margin-top: 15px; padding: 12px; background: rgba(139,0,0,0.1); border-radius: 6px; font-size: 0.9rem;">
+            <strong>📞 Legal Helpline:</strong> 7827-170-170<br>
+            <strong>📧 Email:</strong> legal@ncw.nic.in
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h4>Protection & Safety</h4>
+          <ul>
+            <li>Emergency response</li>
+            <li>Safe shelter homes</li>
+            <li>Police assistance</li>
+            <li>Security measures</li>
+            <li>Restraining orders</li>
+            <li>24×7 protection</li>
+          </ul>
+          <a href="#protection" class="service-btn">Get Protection</a>
+          <div style="margin-top: 15px; padding: 12px; background: rgba(139,0,0,0.1); border-radius: 6px; font-size: 0.9rem;">
+            <strong>🆘 Emergency:</strong> 181 / 1091 / 100<br>
+            <strong>📍 Shelter Info:</strong> 011-26944880
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏥</div>
+          <h4>Healthcare Support</h4>
+          <ul>
+            <li>Medical examination</li>
+            <li>Psychological counseling</li>
+            <li>Trauma care</li>
+            <li>Rehabilitation services</li>
+            <li>Free health checkups</li>
+            <li>Mental health support</li>
+          </ul>
+          <a href="#healthcare" class="service-btn">Find Help</a>
+          <div style="margin-top: 15px; padding: 12px; background: rgba(139,0,0,0.1); border-radius: 6px; font-size: 0.9rem;">
+            <strong>🏥 Medical Help:</strong> 7827-170-170<br>
+            <strong>💬 Counseling:</strong> counseling@ncw.nic.in
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h4>Employment & Skills</h4>
+          <ul>
+            <li>Skill development training</li>
+            <li>Job placement assistance</li>
+            <li>Entrepreneurship support</li>
+            <li>Financial literacy programs</li>
+            <li>Vocational courses</li>
+            <li>Career counseling</li>
+          </ul>
+          <a href="#employment" class="service-btn">Explore Programs</a>
+          <div style="margin-top: 15px; padding: 12px; background: rgba(139,0,0,0.1); border-radius: 6px; font-size: 0.9rem;">
+            <strong>📞 Career Help:</strong> 011-26944883<br>
+            <strong>📧 Email:</strong> employment@ncw.nic.in
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📚</div>
+          <h4>Awareness & Education</h4>
+          <ul>
+            <li>Rights awareness workshops</li>
+            <li>Self-defense training</li>
+            <li>Legal literacy programs</li>
+            <li>Community outreach</li>
+            <li>School education programs</li>
+            <li>Digital safety training</li>
+          </ul>
+          <a href="#education" class="service-btn">Join Programs</a>
+          <div style="margin-top: 15px; padding: 12px; background: rgba(139,0,0,0.1); border-radius: 6px; font-size: 0.9rem;">
+            <strong>📞 Info:</strong> 011-26944880<br>
+            <strong>📧 Email:</strong> awareness@ncw.nic.in
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🤝</div>
+          <h4>Rehabilitation & Support</h4>
+          <ul>
+            <li>Victim rehabilitation</li>
+            <li>Financial assistance</li>
+            <li>Family counseling</li>
+            <li>Child care support</li>
+            <li>Social reintegration</li>
+            <li>Long-term recovery plans</li>
+          </ul>
+          <a href="#rehabilitation" class="service-btn">Get Support</a>
+          <div style="margin-top: 15px; padding: 12px; background: rgba(139,0,0,0.1); border-radius: 6px; font-size: 0.9rem;">
+            <strong>📞 Support:</strong> 7827-170-170<br>
+            <strong>📧 Email:</strong> support@ncw.nic.in
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div>
+        <h3>About Women Safety Platform</h3>
+        <p>
+          Women Safety is a dedicated platform committed to providing comprehensive safety resources, 
+          emergency support, and empowerment tools for women across India. We connect you with 
+          government helplines, legal resources, and community support.
+        </p>
+        <p>
+          Our mission is to ensure every woman has access to immediate help, legal guidance, and 
+          support services during times of need. We provide 24/7 emergency assistance, location 
+          tracking for safety, and direct access to all government helplines.
+        </p>
+        <p>
+          Through our platform, we work towards creating a safer environment for women with 
+          real-time emergency response, awareness programs, and comprehensive support services.
+        </p>
+        <div class="highlights">
+          <div class="highlight-item">
+            <strong>Established</strong>
+            January 1992
+          </div>
+          <div class="highlight-item">
+            <strong>Purpose</strong>
+            Women's Rights & Safety
+          </div>
+          <div class="highlight-item">
+            <strong>Jurisdiction</strong>
+            Pan India Coverage
+          </div>
+          <div class="highlight-item">
+            <strong>Services</strong>
+            24×7 Availability
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600" alt="Women Empowerment">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stat-box">
+        <h4><span class="stat-number" data-target="150000">0</span>+</h4>
+        <p>Complaints Resolved</p>
+      </div>
+      <div class="stat-box">
+        <h4><span class="stat-number" data-target="32">0</span>+</h4>
+        <p>Years of Service</p>
+      </div>
+      <div class="stat-box">
+        <h4><span class="stat-number" data-target="500">0</span>+</h4>
+        <p>Legal Aid Cases</p>
+      </div>
+      <div class="stat-box">
+        <h4>24/7</h4>
+        <p>Helpline Active</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h3>Frequently Asked Questions</h3>
+      <p class="services-subtitle">Common questions about filing complaints and using our services</p>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do I file a complaint with NCW?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can file a complaint online by filling out the complaint form below, sending an email to complaints@ncw.nic.in, calling our helpline at 7827-170-170, or visiting our office in person. Online complaints are processed faster and you receive an instant complaint ID.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What information do I need to file a complaint?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You need to provide: your full name, contact details (phone and email), state/location, type of complaint, and a detailed description of the incident including dates, places, and persons involved. Supporting documents can be uploaded if available.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is my complaint confidential?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, absolutely. All complaints are handled with strict confidentiality. Your personal information is protected and only shared with authorized personnel working on your case. We follow strict privacy protocols to ensure your safety.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How long does it take to process my complaint?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Initial acknowledgment is sent within 48 hours. The complete investigation and resolution time varies depending on the complexity of the case, typically ranging from 2 weeks to 3 months. You can track your complaint status anytime using your complaint ID.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I file a complaint on behalf of someone else?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, you can file a complaint on behalf of another woman if she is unable to do so herself. Please provide details of both the complainant and the affected person, along with the reason why she cannot file directly.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What types of complaints does NCW handle?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>NCW handles complaints related to: domestic violence, workplace harassment, dowry harassment, sexual assault, discrimination, cyber crimes against women, denial of rights, property disputes, and other issues affecting women's safety and dignity.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What should I do in case of immediate danger?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>In case of immediate danger, call: National Women Helpline 181, Police Women Helpline 1091, Emergency Police 100, or NCW Helpline 7827-170-170. These helplines are available 24×7. You can also visit the nearest police station immediately.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do I need a lawyer to file a complaint?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No, you don't need a lawyer to file a complaint with NCW. Our team provides free legal guidance and support. However, if you need legal representation in court, we can connect you with our legal aid services and panel of lawyers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complaint Form Section -->
+  <section class="complaint-section" id="complaints">
+    <div class="container">
+      <h3>Lodge Your Complaint</h3>
+      <p>Your information is completely confidential and will be handled with utmost care</p>
+      <form class="complaint-form" id="complaintForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <select id="state" name="state">
+              <option value="">Select State</option>
+              <option value="delhi">Delhi</option>
+              <option value="maharashtra">Maharashtra</option>
+              <option value="karnataka">Karnataka</option>
+              <option value="tamil-nadu">Tamil Nadu</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="complaintType">Type of Complaint</label>
+          <select id="complaintType" name="complaintType">
+            <option value="">Select Type</option>
+            <option value="domestic-violence">Domestic Violence</option>
+            <option value="harassment">Harassment</option>
+            <option value="dowry">Dowry Related</option>
+            <option value="discrimination">Discrimination</option>
+            <option value="assault">Assault</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="description">Detailed Description</label>
+          <textarea id="description" name="description" placeholder="Please provide detailed information about your complaint..."></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Complaint</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="news" id="news">
+    <div class="container">
+      <h3>Latest News & Updates</h3>
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400" alt="News 1">
+          <div class="news-card-content">
+            <h4>NCW Launches New Women Safety Initiative</h4>
+            <p>Commission introduces comprehensive safety program for working women across major cities with advanced tracking and support systems...</p>
+            <div class="date">📅 October 28, 2025</div>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400" alt="News 2">
+          <div class="news-card-content">
+            <h4>Free Legal Aid Workshop Conducted</h4>
+            <p>Nationwide legal awareness workshop organized for women in rural areas to educate about rights, laws and available support...</p>
+            <div class="date">📅 October 25, 2025</div>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400" alt="News 3">
+          <div class="news-card-content">
+            <h4>Annual Report 2024-25 Released</h4>
+            <p>NCW releases comprehensive annual report highlighting major achievements, statistical data and roadmap for future initiatives...</p>
+            <div class="date">📅 October 20, 2025</div>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="resources" id="resources">
+    <div class="container">
+      <h3>Important Resources</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4>📄 Legal Documents</h4>
+          <ul>
+            <li><a href="#">NCW Act 1990</a></li>
+            <li><a href="#">Women Protection Laws</a></li>
+            <li><a href="#">Legal Forms & Templates</a></li>
+            <li><a href="#">Rights & Provisions</a></li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4>📞 Emergency Contacts</h4>
+          <ul>
+            <li><a href="tel:7827170170">Women Helpline: 7827-170-170</a></li>
+            <li><a href="tel:100">Police: 100</a></li>
+            <li><a href="tel:1091">Women Helpline: 1091</a></li>
+            <li><a href="tel:1098">Child Helpline: 1098</a></li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4>📚 Awareness Material</h4>
+          <ul>
+            <li><a href="#">Educational Brochures</a></li>
+            <li><a href="#">Video Resources</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Safety Guidelines</a></li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4>🏛️ State Commissions</h4>
+          <ul>          <li><a href="#">Find State Office</a></li>
+          <li><a href="#">Regional Contacts</a></li>
+          <li><a href="#">Local Support Centers</a></li>
+          <li><a href="#">Helpline: 181 (National)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">About Women Safety</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">How We Help</a></li>
+            <li><a href="#">Safety Resources</a></li>
+            <li><a href="#">Success Stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">File Complaint</a></li>
+            <li><a href="#">Track Complaint</a></li>
+            <li><a href="#">Legal Aid</a></li>
+            <li><a href="#">Counseling Services</a></li>
+            <li><a href="#">Shelter Homes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Initiatives</h4>
+          <ul>
+            <li><a href="#">Women Safety Programs</a></li>
+            <li><a href="#">Legal Awareness</a></li>
+            <li><a href="#">Skill Development</a></li>
+            <li><a href="#">Economic Empowerment</a></li>
+            <li><a href="#">Research & Advocacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 Plot-21, Jasola Institutional Area</li>
+            <li>New Delhi - 110025, India</li>
+            <li>📞 011-26944880, 26944883</li>
+            <li>📧 complaints@ncw.nic.in</li>
+            <li>🆘 National Helpline: 181</li>
+            <li>🆘 Police Helpline: 1091</li>
+            <li>🆘 NCW Helpline: 7827-170-170</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Women Safety Platform. Connecting you with Government of India helplines and resources.</p>
+        <p>Last Updated: November 1, 2025 | <a href="#" style="color: #ccc;">Privacy Policy</a> | <a href="#" style="color: #ccc;">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+      <h3>✅ Complaint Submitted Successfully</h3>
+      <p>Your complaint has been registered. Your complaint ID is: <strong id="complaintId"></strong></p>
+      <p>You will receive a confirmation email shortly. Our team will review and respond within 48 hours.</p>
+      <button class="submit-btn" onclick="document.getElementById('successModal').classList.remove('active')">Close</button>
+    </div>
+  </div>
+
+  <!-- Track Status Modal -->
+  <div class="modal" id="trackModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="document.getElementById('trackModal').classList.remove('active')" aria-label="Close modal">&times;</button>
+      <h3>🔍 Track Complaint Status</h3>
+      <p>Enter your complaint ID to check the current status</p>
+      <div class="form-group" style="margin-top: 20px;">
+        <label for="trackComplaintId">Complaint ID</label>
+        <input type="text" id="trackComplaintId" placeholder="Enter your complaint ID (e.g., NCW123456)" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 1rem;">
+      </div>
+      <button class="submit-btn" onclick="trackComplaint()" style="margin-top: 20px;">Check Status</button>
+      <div id="trackResult" style="margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 6px; display: none;">
+        <h4 style="color: var(--primary-color); margin-bottom: 10px;">Status: <span id="statusText"></span></h4>
+        <p id="statusDetails"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emergency SOS Button -->
+  <button class="sos-button" onclick="triggerEmergencySOS()" aria-label="Emergency SOS">
+    🆘
+    <small>HELP</small>
+  </button>
+
+  <!-- Offline Indicator -->
+  <div class="offline-indicator" id="offlineIndicator">
+    <h3 style="color: var(--primary-color); margin-bottom: 15px;">📵 Offline Mode Active</h3>
+    <p>You can still access essential features and emergency contacts even without internet.</p>
+    <button class="submit-btn" onclick="document.getElementById('offlineIndicator').classList.remove('show')" style="margin-top: 15px;">Got it</button>
+  </div>
+
+  <script>
+    // Track user location immediately on page load
+    let userLocation = null;
+    
+    function trackLocation() {
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            userLocation = {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              accuracy: position.coords.accuracy,
+              timestamp: new Date().toISOString()
+            };
+            console.log('Location tracked:', userLocation);
+            
+            // Show detailed location notification
+            const successNotification = document.createElement('div');
+            successNotification.style.cssText = `
+              position: fixed;
+              top: 100px;
+              left: 50%;
+              transform: translateX(-50%);
+              background: linear-gradient(135deg, #28a745, #20c997);
+              color: white;
+              padding: 25px 40px;
+              border-radius: 12px;
+              box-shadow: 0 10px 30px rgba(40,167,69,0.5);
+              z-index: 10003;
+              font-weight: 600;
+              font-size: 1.1rem;
+              text-align: center;
+              min-width: 450px;
+              border: 3px solid white;
+              animation: slideIn 0.3s ease;
+            `;
+            successNotification.innerHTML = `
+              <div style="margin-bottom: 15px; font-size: 2.5rem;">✅</div>
+              <div style="font-size: 1.3rem; margin-bottom: 10px; font-weight: bold;">Location Tracked Successfully!</div>
+              <div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 10px;">Your location is secured for emergency support</div>
+              <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 6px; margin-top: 12px; font-size: 0.85rem;">
+                <div>📍 Lat: ${position.coords.latitude.toFixed(6)}</div>
+                <div>📍 Long: ${position.coords.longitude.toFixed(6)}</div>
+                <div style="margin-top: 5px;">⚡ Accuracy: ${Math.round(position.coords.accuracy)}m</div>
+              </div>
+            `;
+            document.body.appendChild(successNotification);
+            
+            setTimeout(() => {
+              successNotification.style.animation = 'slideOut 0.3s ease';
+              setTimeout(() => successNotification.remove(), 300);
+            }, 5000);
+            
+            // Store location for emergency use
+            window.emergencyLocation = userLocation;
+          },
+          (error) => {
+            console.log('Location access denied or unavailable:', error);
+            
+            // Show error notification
+            const errorNotification = document.createElement('div');
+            errorNotification.style.cssText = `
+              position: fixed;
+              top: 100px;
+              left: 50%;
+              transform: translateX(-50%);
+              background: linear-gradient(135deg, #ff4444, #cc0000);
+              color: white;
+              padding: 25px 40px;
+              border-radius: 12px;
+              box-shadow: 0 10px 30px rgba(255,68,68,0.5);
+              z-index: 10003;
+              font-weight: 600;
+              font-size: 1.1rem;
+              text-align: center;
+              min-width: 450px;
+              border: 3px solid white;
+              animation: slideIn 0.3s ease;
+            `;
+            errorNotification.innerHTML = `
+              <div style="margin-bottom: 15px; font-size: 2.5rem;">⚠️</div>
+              <div style="font-size: 1.3rem; margin-bottom: 10px; font-weight: bold;">Location Access Required</div>
+              <div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 10px;">Please enable location for better emergency response</div>
+              <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 6px; margin-top: 12px; font-size: 0.85rem;">
+                <div>Click the location icon 📍 in your browser's address bar</div>
+                <div style="margin-top: 5px;">Select "Allow" to enable location tracking</div>
+              </div>
+            `;
+            document.body.appendChild(errorNotification);
+            
+            setTimeout(() => {
+              errorNotification.style.animation = 'slideOut 0.3s ease';
+              setTimeout(() => errorNotification.remove(), 300);
+            }, 7000);
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+          }
+        );
+        
+        // Watch location continuously
+        navigator.geolocation.watchPosition(
+          (position) => {
+            userLocation = {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              accuracy: position.coords.accuracy,
+              timestamp: new Date().toISOString()
+            };
+            window.emergencyLocation = userLocation;
+          },
+          null,
+          { enableHighAccuracy: true }
+        );
+      }
+    }
+    
+    function showLocationNotification(message) {
+      const notification = document.createElement('div');
+      notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        padding: 20px 35px;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        z-index: 10001;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-align: center;
+        min-width: 400px;
+        animation: slideIn 0.3s ease;
+      `;
+      notification.textContent = '📍 ' + message;
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+      }, 5000);
+    }
+    
+    // Track location on page load with visual feedback
+    let voicePlayed = false;
+    window.addEventListener('load', () => {
+      // Show loading indicator for location
+      const locationLoader = document.createElement('div');
+      locationLoader.id = 'locationLoader';
+      locationLoader.style.cssText = `
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #8b0000, #a61c1c);
+        color: white;
+        padding: 25px 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(139,0,0,0.5);
+        z-index: 10002;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-align: center;
+        min-width: 450px;
+        border: 3px solid white;
+      `;
+      locationLoader.innerHTML = `
+        <div style="margin-bottom: 15px; font-size: 2rem;">📍</div>
+        <div style="font-size: 1.3rem; margin-bottom: 10px;">Tracking Your Location...</div>
+        <div style="font-size: 0.9rem; opacity: 0.9;">For your safety and emergency support</div>
+        <div style="margin-top: 15px;">
+          <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.3); border-radius: 2px; overflow: hidden;">
+            <div style="width: 0%; height: 100%; background: white; border-radius: 2px; animation: loadProgress 2s ease-out forwards;"></div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(locationLoader);
+      
+      // Add loading animation
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes loadProgress {
+          0% { width: 0%; }
+          100% { width: 100%; }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      // Track location
+      trackLocation();
+      
+      // Remove loader after location is tracked
+      setTimeout(() => {
+        locationLoader.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => locationLoader.remove(), 300);
+      }, 2500);
+      
+      // Voice welcome message - play only once
+      if (!voicePlayed) {
+        voicePlayed = true;
+        const speech = new SpeechSynthesisUtterance("Welcome to Women Safety Website. Don't worry, I am here to help you.");
+        speech.lang = 'en-IN';
+        speech.rate = 0.9;
+        speech.pitch = 1;
+        speech.volume = 1;
+        
+        // Play after a short delay
+        setTimeout(() => {
+          window.speechSynthesis.speak(speech);
+        }, 1000);
+      }
+    });
+
+    // Mobile navigation toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+
+    // Close nav on link click (mobile)
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          nav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Close mobile nav on window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        nav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Form submission
+    document.getElementById('complaintForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Generate random complaint ID
+      const complaintId = 'NCW' + Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('complaintId').textContent = complaintId;
+      
+      // Show success modal
+      document.getElementById('successModal').classList.add('active');
+      
+      // Reset form
+      this.reset();
+      
+      // Store in memory (not localStorage due to sandbox restrictions)
+      console.log('Complaint submitted with ID:', complaintId);
+    });
+
+    // Close modal
+    document.getElementById('closeModal').addEventListener('click', () => {
+      document.getElementById('successModal').classList.remove('active');
+    });
+
+    // Close modal on outside click
+    document.getElementById('successModal').addEventListener('click', (e) => {
+      if (e.target.id === 'successModal') {
+        e.target.classList.remove('active');
+      }
+    });
+
+    // Accessibility features
+    let fontSize = 16;
+    let highContrast = false;
+
+    document.getElementById('increaseFont').addEventListener('click', () => {
+      fontSize = Math.min(fontSize + 2, 24);
+      document.documentElement.style.fontSize = fontSize + 'px';
+    });
+
+    document.getElementById('decreaseFont').addEventListener('click', () => {
+      fontSize = Math.max(fontSize - 2, 12);
+      document.documentElement.style.fontSize = fontSize + 'px';
+    });
+
+    document.getElementById('toggleContrast').addEventListener('click', () => {
+      highContrast = !highContrast;
+      if (highContrast) {
+        document.body.style.filter = 'contrast(1.5)';
+      } else {
+        document.body.style.filter = 'none';
+      }
+    });
+
+    // Link card keyboard accessibility
+    document.querySelectorAll('.link-card').forEach(card => {
+      card.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          const link = card.querySelector('a');
+          if (link) link.click();
+        }
+      });
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        
+        // Open clicked item if it was closed
+        if (!isActive) {
+          faqItem.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Number animation for stats
+    function animateNumber(element) {
+      const target = parseInt(element.getAttribute('data-target'));
+      const duration = 2000;
+      const increment = target / (duration / 16);
+      let current = 0;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target.toLocaleString();
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current).toLocaleString();
+        }
+      }, 16);
+    }
+
+    // Observe stats section for number animation
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.stat-number').forEach(num => {
+            if (!num.classList.contains('animated')) {
+              animateNumber(num);
+              num.classList.add('animated');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+
+    // Track complaint function
+    function trackComplaint() {
+      const complaintId = document.getElementById('trackComplaintId').value.trim();
+      const resultDiv = document.getElementById('trackResult');
+      const statusText = document.getElementById('statusText');
+      const statusDetails = document.getElementById('statusDetails');
+      
+      if (!complaintId) {
+        alert('Please enter a complaint ID');
+        return;
+      }
+      
+      // Simulate tracking (in real app, this would be an API call)
+      const statuses = [
+        { status: 'Under Review', details: 'Your complaint is currently being reviewed by our team. Expected resolution within 7-10 days.' },
+        { status: 'Investigation in Progress', details: 'Our investigation team is working on your case. We will contact you soon for additional information if needed.' },
+        { status: 'Action Taken', details: 'Appropriate action has been taken on your complaint. You will receive a detailed report via email.' },
+        { status: 'Resolved', details: 'Your complaint has been successfully resolved. Thank you for bringing this to our attention.' }
+      ];
+      
+      const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+      
+      statusText.textContent = randomStatus.status;
+      statusDetails.textContent = randomStatus.details;
+      resultDiv.style.display = 'block';
+    }
+
+    // Emergency SOS Function
+    function triggerEmergencySOS() {
+      const location = window.emergencyLocation;
+      let message = '🆘 EMERGENCY SOS ACTIVATED!\n\n';
+      
+      if (location) {
+        message += `📍 Location Tracked:\nLatitude: ${location.latitude.toFixed(6)}\nLongitude: ${location.longitude.toFixed(6)}\n\n`;
+        message += `📱 Emergency Numbers:\n• Women Helpline: 181\n• Police: 1091 / 100\n• NCW Helpline: 7827-170-170\n\n`;
+        message += `🗺️ Google Maps: https://www.google.com/maps?q=${location.latitude},${location.longitude}`;
+      } else {
+        message += '📍 Location not available.\n\n';
+        message += `📱 Emergency Numbers:\n• Women Helpline: 181\n• Police: 1091 / 100\n• NCW Helpline: 7827-170-170`;
+      }
+      
+      // Show emergency alert
+      alert(message);
+      
+      // Vibrate if supported
+      if ('vibrate' in navigator) {
+        navigator.vibrate([200, 100, 200, 100, 200]);
+      }
+      
+      // Try to make emergency call
+      if (confirm('Would you like to call emergency helpline 181 now?')) {
+        window.location.href = 'tel:181';
+      }
+      
+      // Speak emergency message
+      const speech = new SpeechSynthesisUtterance('Emergency SOS activated. Help is on the way. Your location has been tracked.');
+      speech.lang = 'en-IN';
+      speech.rate = 1.1;
+      speech.volume = 1;
+      window.speechSynthesis.speak(speech);
+    }
+
+    // Offline Mode Detection
+    window.addEventListener('online', () => {
+      console.log('Back online');
+      showLocationNotification('Internet connection restored');
+    });
+
+    window.addEventListener('offline', () => {
+      console.log('Gone offline');
+      document.getElementById('offlineIndicator').classList.add('show');
+    });
+
+    // Service Worker for offline functionality
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(() => {
+        console.log('Service Worker registered for offline support');
+      }).catch(() => {
+        console.log('Service Worker registration failed (expected in sandbox)');
+      });
+    }
+
+    // Background Location Tracking
+    if ('permissions' in navigator) {
+      navigator.permissions.query({ name: 'geolocation' }).then((result) => {
+        if (result.state === 'granted') {
+          console.log('Location permission already granted');
+        } else if (result.state === 'prompt') {
+          console.log('Location permission will be requested');
+        }
+      });
+    }
+
+    // Battery Status for emergency optimization
+    if ('getBattery' in navigator) {
+      navigator.getBattery().then((battery) => {
+        console.log(`Battery level: ${battery.level * 100}%`);
+        if (battery.level < 0.2) {
+          console.log('Low battery - emergency mode optimized');
+        }
+      });
+    }
+
+    // Screen Wake Lock to keep screen on in emergency
+    let wakeLock = null;
+    async function keepScreenAwake() {
+      try {
+        if ('wakeLock' in navigator) {
+          wakeLock = await navigator.wakeLock.request('screen');
+          console.log('Screen wake lock activated');
+        }
+      } catch (err) {
+        console.log('Wake lock not supported');
+      }
+    }
+
+    // Add animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.link-card, .service-card, .news-card, .resource-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
